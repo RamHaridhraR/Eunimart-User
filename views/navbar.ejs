@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/cards.css">
+        <link rel="stylesheet" type="text/css" href="/css/nav.css">
+        <script src="/js/main.js"></script>
+    </head>
+<div class="navbar">
+    <div class="logo">
+      <h2>Hello, User</h2>
+    </div>
+  
+    <div class="nav__links">
+      <a href="#home" class="active nav__link">Home</a>
+      <a href="#about" class="nav__link">User's Details</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </div>
+  </div>
+  
+  <div id="home" class="section">
+    <!-- <h1>Home</h1> -->
+    <div class="cards-list">
+        <% let i=0 %>;
+        <%user.forEach(function(data){%>
+            <div class="card 1">
+                <div class="card_image"> 
+                   <a href="http://localhost:3500/users/<%=user[i].id%>">
+                    <img src ="<%=user[i].avatar%>" style="width:250;height:250"></a> </div>
+                <div class="card_title title-black">
+                    <p><%=user[i].first_name%> <%=user[i].last_name%></p>
+                    <p style=font-size:medium><%=user[i].email%></p>
+                </div>
+            </div>  
+            <% i++; %>
+        <%}) %>
+</div>
+    <!-- </div> -->
+  <div id="about" class="section">
+    <!-- <h1>About</h1> -->
+  </div>
+  <div id="contact" class="section">
+    <!-- <h1>Contact</h1> -->
+  </div>
+  

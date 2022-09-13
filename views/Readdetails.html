@@ -1,0 +1,16 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+                const endpoint = `https://reqres.in/api/users`;
+                let array=[];
+                fetch(endpoint)
+                .then(res=>res.json())
+                .then(d=>{
+                    details = [...d.data];
+                    array.push(...d.data);
+                })
+        </script>
+    </body>
+</html>
